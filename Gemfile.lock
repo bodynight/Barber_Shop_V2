@@ -25,6 +25,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (13.0.3)
     ripl (0.7.1)
       bond (~> 0.5.1)
     ripl-multi_line (0.3.1)
@@ -60,10 +61,11 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
+  x64-mingw32
 
 DEPENDENCIES
   activerecord
+  rake
   sinatra
   sinatra-activerecord
   sinatra-contrib
@@ -71,4 +73,4 @@ DEPENDENCIES
   tux
 
 BUNDLED WITH
-   1.16.1
+   2.2.17
