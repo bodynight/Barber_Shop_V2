@@ -2,7 +2,7 @@
 	Здесь вы можете занести свои контакты:
 </h2>
 
-<form action="/visit" method="POST" role="form">
+<form action="/contacts" method="POST" role="form">
 
   <div class="form-group">
     <label>Ваше имя</label>
@@ -11,10 +11,19 @@
 
   <div class="form-group">
     <label>Ваш email:</label>
-    <input name="email" type="text" class="form-control" placeholder="Ваш телефон" value="<%= @email %>">
+    <input name="email" type="text" class="form-control" placeholder="Ваш email" value="<%= @email %>">
   </div>
 
     <button type="submit" class="btn btn-primary">Записаться</button>
 
 
   </form>
+
+  <h3>
+  	Перечень контактов:
+  </h3>
+  <br/>
+  <% @contacts.each do |row| %>
+  <%=row.name %>: <%= row.email %>
+  <hr/>
+  <% end %>

@@ -17,6 +17,7 @@ end
 
 before do
 	@barbers = Barber.order "created_at DESC"
+	@contacts = Contact.all
 end
 
 get '/' do
@@ -49,6 +50,7 @@ post '/visit' do
 end
 
 get '/contacts' do
+
   erb :contacts
 end
 
@@ -56,5 +58,10 @@ post '/contacts' do
 	@username = params[:username]
 	@email = params[:email]
 
-erb :contacts
+	row = Contact.new :name => @username, :email => @email
+	row.save
+
+
+
+erb "Спасибо контакты добавлены"
 end
