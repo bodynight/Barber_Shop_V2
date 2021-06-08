@@ -62,6 +62,12 @@ post '/contacts' do
 	row.save
 
 
+<<<<<<< HEAD
+=======
+get '/barber/:id' do 
+	@barber = Barber.find params[:id]
+	erb :barber
+>>>>>>> 691b875 (вывод информации о Barber на страницу)
 
 erb "Спасибо контакты добавлены"
 end
